@@ -1,30 +1,42 @@
+  function countFasta(content) {
+    var lines = content.split('\n')
+    console.log(lines);
+    var count = 0;
+    var header = '';
+    for (var i = 0; i < lines.length; i++) {
+      if ( lines[i].startsWith('>') ) {
+        header = lines[i].slice(1) + ":"
+        continue
+      }
+      else {
+        count += lines[i].length
+      }
+    }
+      document.getElementById("seqlen").innerHTML = `${header} ${count} bp` 
+    }
+
   function handleFileSelect(evt) {
     var files = evt.target.files; // FileList object
 
-    // Loop through the FileList and render image files as thumbnails.
     for (var i = 0, f; f = files[i]; i++) {
-
-      // Only process image files.
-      if (!f.type.match('image.*')) {
-        continue;
-      }
-
+      console.log(f)
       var reader = new FileReader();
-
-      // Closure to capture the file information.
-      reader.onload = (function(theFile) {
-        return function(e) {
-          // Render thumbnail.
-          var span = document.createElement('span');
-          span.innerHTML = ['<img class="thumb" src="', e.target.result,
-                            '" title="', escape(theFile.name), '"/>'].join('');
-          document.getElementById('list').insertBefore(span, null);
-        };
-      })(f);
-
-      // Read in the image file as a data URL.
-      reader.readAsDataURL(f);
+      reader.readAsText(f);
+      reader.onload = function () {
+        var content = reader.result;
+        document.getElementById("content").innerHTML = content;
+        countFasta(content)
+      }
     }
   }
 
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+  function handleTextContent(evt) {
+    var content = document.getElementById("textbox").value
+    //console.log(content)
+    countFasta(content)
+  }
+
+
+  document.getElementById('textbox').addEventListener('change', handleTextContent, false);
+  document.getElementById('fasta').addEventListener('change', handleFileSelect, false);
