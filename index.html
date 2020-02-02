@@ -2,60 +2,28 @@
 <html lang=en>
 	<head>
 		<meta charset=UTF-8>
-		<meta name="description" content="Info on Jojo's Bizarre Adventure">
+		<meta name="description" content="Set of webtools for biological sequences">
 		<meta name="author" content="Gabriel Alves Vieira">
-		<meta name="year" content="2019">
+		<meta name="year" content="2020">
 		<meta name="custom" content="Custom meta tags may be used to store data needed in javascript">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- The meta tag "viewport" makes the website look good on all devices. Source: https://www.w3schools.com/tags/tag_meta.asp -->
-		<title> Joestar hub </title>
-		<link rel=icon type=image/png href=stonemask.png />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<title> seqtools </title>
+		<link rel=icon type=image/png href=dna.jpeg/>
 	</head>
 	<body>
 		<article>
-		<header><h1>Welcome to the amazing world of JoJo's Bizarre Adventure!!</h1></header>
-		
-		<audio id="zawarudo" src="https://www.myinstants.com/media/sounds/hd-stardust-crusaders-za-warudo_1.mp3" preload="auto"></audio>
-		<button onclick="document.getElementById('zawarudo').play();">Press to stop time</button><br>
-
-		<meter value=4 min=0 max=4></meter> 4 out of 4 pillar men defeated by Joseph <br>
-		<progress value=30 max=100></progress> Pucci's reboot is at 30% <br>
-
-
-		<br><q>Do you believe in gravity?</q><cite> - DIO, Stone Ocean</cite>
-		<!-- <q> for short quotes, <blockquote> for larger ones. Source: https://www.w3schools.com/tags/tag_blockquote.asp -->
-
-		<table>
-			<caption><h3>The Joestar family line and its adventures are summarized in this table:</h3></caption>
-			<tr><th>Protagonist</th><th>Story Arc</th></tr>
-			<tr><td>Jonathan Joestar</td><td>Phantom Blood</td></tr>
-			<tr><td>Joseph Joestar</td><td>Battle Tendency</td></tr>
-			<tr><td>Jotaro Kujo</td><td>Stardust Crusaders</td></tr>
-			<tr><td><a href="josuke.html" target="_blank">Josuke Higashikata</a></td><td>Diamond is Unbreakable</td></tr>
-			<tr><td><a href="https://jojo.fandom.com/wiki/Giorno_Giovanna" target="_blank">Giorno Giovanna</a></td><td>Vento Aureo</td></tr>
-			<tr><td><a href="https://jojo.fandom.com/wiki/Jolyne_Cujoh" target="_blank">Jolyne Kujo</a></td><td>Stone Ocean</td></tr>
-			<tr><td><a href="https://jojo.fandom.com/wiki/Johnny_Joestar" target="_blank">Johnny Joestar</a></td><td>Stell Ball Run</td></tr>
-		</table>
-
-		<header><h3>In order to better understand JoJo and its a little bit convoluted timeline, you can watch the two videos below:</h3></header>
-			<iframe width="697" height="392" src="https://www.youtube.com/embed/tlClnqlC-E4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<iframe width="697" height="392" src="https://www.youtube.com/embed/WAjCBLfPsJc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		
-		<header><h3>And don't forget to listen to some opening themes:</h3></header>
-			<p>OP2-Bloody Stream (<code>mp3</code>):<br></p>
-				<audio title="OP2-Bloody Stream" src="http://66.90.93.122/ost/jojo-s-bizarre-adventure-2nd-season-op/zztokzbf/01.%20BLOODY%20STREAM.mp3" controls loop>
-				</audio>
+			<header><h1>Seqtools: several tools to manipulate and parse sequence data</h1></header>
+			<table>
+				<caption><h3>This website contains the following applications:</h3></caption>
+				<tr><th>Tool</th><th>Description</th></tr>
+				<tr><td><a href="count_fasta.html" target="_blank">count_fasta</a></td><td>Counts the number of bp in a (multi)fasta file</td></tr>
+				<tr><td><a href="gb2fa.html" target="_blank">Genbank to fasta</a></td><td>Converts a genbank file to fasta</td></tr>
+				<tr><td><a href="tocome.html" target="_blank">The best is yet to come</a></td><td>New ideas that (hopefully) will be implemented</td></tr>
+			</table>		
+			<header><h3>While you wait for more functionalities, why not relax a little?</h3></header>
+				<p>The Best is Yet to Come (Metal Gear Solid) (<code>mp3</code>):<br></p>
+					<audio title="The Best is Yet to Come (Metal Gear Solid)" src="http://23.237.126.42/ost/metal-gear-solid-original-soundtrack/dlceahnc/18.%20End%20Title%20-%20The%20Best%20is%20Yet%20To%20Come.mp3" controls loop>
+					</audio>
 		</article>
-	
-		<hr>
-
-		<footer>
-			<p>The star will guide you to a new world of bizarre adventures</p>
-			<a href=https://jojo.fandom.com/wiki/Main_Page target="_blank" aria-label=jojo_wiki><i class="fas fa-star"></i></a>
-			<p>Made by Gabriel Alves Vieira</p>
-			<address>gabrieldeusdeth@gmail.com</address>
-		</footer>
-
 	</body>
-</html>
