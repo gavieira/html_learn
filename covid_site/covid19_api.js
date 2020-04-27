@@ -29,13 +29,18 @@ client.get('https://api.covid19api.com/summary', function(response) {
         if (country_name_capitalized == countries[i]['Country'] || 
             country_name.toUpperCase() == countries[i]['CountryCode']) {
         var covid_country = countries[i];
+	delete covid_country.Slug;
         }
     }
-    var output = [];
+    var output = '';
     for (var property in covid_country) {
     output += property + ': ' + covid_country[property]+';\n';
 }
+    if (output == '') {
+	alert("Country not found!")
+	} else {
     alert(output)
+    }
 });
 }
 
